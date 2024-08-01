@@ -1,0 +1,17 @@
+Induction Proof
+
+Base Case:
+- Consider the smallest binary tree, which is a single node (leaf) containing the symbol.
+- For a single node, the function will directly compare the node with the symbol.
+- If the node matches the symbol, the function returns 1.
+- If the node does not match the symbol, the function returns 0.
+- This base case is correctly handled by the second case in the function.
+
+Inductive Step:
+- Assume that the function works correctly for trees of height `h`.
+- For a tree of height `h+1`, the tree is structured as a node with two subtrees (left and right).
+- The function recursively counts the symbol in both subtrees.
+- The function then sums the counts from both subtrees.
+- By the induction hypothesis, each subtree correctly counts the symbols within it.
+- Therefore, the sum of the counts from both subtrees, plus the current node if it matches the symbol, correctly counts the total occurrences in the tree of height `h+1`.
+

@@ -1,0 +1,18 @@
+Induction Proof
+
+Base Case:
+- Consider the smallest binary tree, which is a single node (leaf) containing the symbol.
+- For a single node, the function will directly compare the node with the symbol.
+- If the node matches the symbol, the function returns True.
+- If the node does not match the symbol, the function returns False.
+- This base case is correctly handled by the first two cases in the function.
+
+Inductive Step:
+- Assume that the function works correctly for trees of height `h`.
+- For a tree of height `h+1`, the tree is structured as a node with two subtrees (left and right).
+- The function recursively checks for the symbol in both subtrees.
+- The function then returns the logical OR of the results from both subtrees.
+- By the induction hypothesis, each subtree correctly determines the presence of the symbol within it.
+- Therefore, the logical OR of the results from both subtrees correctly determines the presence of the symbol in the tree of height `h+1`.
+
+

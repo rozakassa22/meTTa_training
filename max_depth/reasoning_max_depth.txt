@@ -1,0 +1,16 @@
+Induction Proof
+
+Base Case:
+- Consider the smallest binary tree, which is a single node (leaf).
+- For a single node, the depth is 1.
+- This base case is correctly handled by the function returning 1 for a leaf node.
+
+Inductive Step:
+- Assume that the function works correctly for trees of height `h`.
+- For a tree of height `h+1`, the tree is structured as a node with two subtrees (left and right).
+- The function recursively calculates the maximum depth of both subtrees.
+- The function then returns 1 plus the maximum depth of the two subtrees.
+- By the induction hypothesis, each subtree correctly calculates its maximum depth.
+- Therefore, adding 1 to the maximum of the depths of the two subtrees correctly calculates the maximum depth of the tree of height `h+1`.
+
+
